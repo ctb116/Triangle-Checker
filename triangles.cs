@@ -12,15 +12,15 @@ public class Triangle {
     }
     else if ((firstSide == secondSide) && (firstSide == thirdSide))
     {
-      return "equilateral";
+      return "a equilateral";
     }
     else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
     {
-      return "isosceles";
+      return "a isosceles";
     }
     else
     {
-      return "scalene";
+      return "a scalene";
     }
   }
 }
@@ -35,13 +35,7 @@ class FrontEnd {
     int thirdSide = int.Parse(Console.ReadLine());
     Triangle checkTriangle = new Triangle ();
 
-    Console.WriteLine ("This is a " + checkTriangle.IsTriangle(firstSide, secondSide, thirdSide) + " triangle!");
+    Console.WriteLine ("This is" + checkTriangle.IsTriangle(firstSide, secondSide, thirdSide) + " triangle!");
 
   }
 }
-
-// read line number - 2 times INT
-// side one side two side three
-// if side one equals side two then isosceles
-// if side one two and three equal then equailateral
-// else scalene no sides are equal
