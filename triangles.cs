@@ -16,10 +16,10 @@ class TriangleCheck
     {
       Console.WriteLine("This is not a triangle");
     }
-    // else if ()
-    // {
-    //
-    // }
+    else if (firstSide == secondSide && firstSide == thirdSide)
+    {
+      Console.WriteLine("This is an equilateral triganle. All sides are equal");
+    }
   }
 }
 
