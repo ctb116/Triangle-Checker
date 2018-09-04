@@ -16,9 +16,17 @@ class TriangleCheck
     {
       Console.WriteLine("This is not a triangle");
     }
-    else if (firstSide == secondSide && firstSide == thirdSide)
+    else if ((firstSide == secondSide) && (firstSide == thirdSide))
     {
       Console.WriteLine("This is an equilateral triganle. All sides are equal");
+    }
+    else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
+    {
+      Console.WriteLine("This is a isosceles triangle. Only two sides are equal");
+    }
+    else
+    {
+      Console.WriteLine("No sides are equal, you have a scalene triangle");
     }
   }
 }
