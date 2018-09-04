@@ -1,33 +1,42 @@
 using System;
 
-class TriangleCheck
-{
-  static void Main()
-  {
-    Console.WriteLine("Find out what type of triangle you have");
-    Console.WriteLine("Enter first side length");
-    int firstSide = int.Parse(Console.ReadLine());
-    Console.WriteLine("Enter second side length");
-    int secondSide = int.Parse(Console.ReadLine());
-    Console.WriteLine("Enter third side length");
-    int thirdSide = int.Parse(Console.ReadLine());
+public class Triangle {
+    public int firstSide;
+    public int secondSide;
+    public int thirdSide;
+    public string IsTriangle (int firstSide, int secondSide, int thirdSide) {
 
     if (firstSide > (secondSide + thirdSide) || secondSide > (firstSide + thirdSide) || thirdSide > (firstSide + secondSide))
     {
-      Console.WriteLine("This is not a triangle");
+      return "not a";
     }
     else if ((firstSide == secondSide) && (firstSide == thirdSide))
     {
-      Console.WriteLine("This is an equilateral triganle. All sides are equal");
+      return "equilateral";
     }
     else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
     {
-      Console.WriteLine("This is a isosceles triangle. Only two sides are equal");
+      return "isosceles";
     }
     else
     {
-      Console.WriteLine("No sides are equal, you have a scalene triangle");
+      return "scalene";
     }
+  }
+}
+
+class FrontEnd {
+  public static void Main () {
+    Console.WriteLine("Find out what type of triangle you have. Enter the 1st side of your triangle");
+    int firstSide = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter the 2nd side of your triangle");
+    int secondSide = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter the 3rd side of your triangle");
+    int thirdSide = int.Parse(Console.ReadLine());
+    Triangle checkTriangle = new Triangle ();
+
+    Console.WriteLine ("This is a " + checkTriangle.IsTriangle(firstSide, secondSide, thirdSide) + " triangle!");
+
   }
 }
 
