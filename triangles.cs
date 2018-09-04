@@ -35,7 +35,7 @@ class FrontEnd {
     int thirdSide = int.Parse(Console.ReadLine());
     Triangle checkTriangle = new Triangle ();
 
-    Console.WriteLine ("This is" + checkTriangle.IsTriangle(firstSide, secondSide, thirdSide) + " triangle!");
+    Console.WriteLine ("This is " + checkTriangle.IsTriangle(firstSide, secondSide, thirdSide) + " triangle!");
 
   }
 }
